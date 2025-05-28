@@ -33,10 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      </head>
-      <body className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-black`}>
+      <body
+        className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-black`}
+      >
         <Header />
         {children}
         <Footer />

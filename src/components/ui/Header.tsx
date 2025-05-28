@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -11,7 +12,7 @@ export default function Header() {
     <div className="container mx-auto px-4">
       <header className="flex h-16 w-full items-center px-8 bg-black text-white">
         <Link href="#" className="mr-6 flex items-center" prefetch={false}>
-          <img src="/logo.svg" alt="Pandem" width={20} height={20} />
+          <Image src="/logo.svg" alt="Pandem" width={20} height={20} />
           <span className="ml-3">Pandem</span>
         </Link>
         <NavigationMenu>
@@ -65,7 +66,9 @@ export default function Header() {
         </NavigationMenu>
         <div className="ml-auto flex gap-2">
           <Button className="bg-black text-white cursor-pointer">Login</Button>
-          <Button className="bg-white text-black hover:bg-neutral-300 cursor-pointer">Sign Up</Button>
+          <Button className="bg-white text-black hover:bg-neutral-300 cursor-pointer">
+            Sign Up
+          </Button>
         </div>
       </header>
     </div>

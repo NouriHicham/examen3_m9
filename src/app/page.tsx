@@ -70,8 +70,8 @@ export default function Home() {
           <br /> code
         </h1>
         <p className="text-lg md:text-2xl mb-20">
-          Invite the bot, pick a channel, and you're set—no custom code needed,
-          and no vendor lock-in.
+          Invite the bot, pick a channel, and you&apos;re set—no custom code
+          needed, and no vendor lock-in.
         </p>
         <Image
           src="/heroimage.png"

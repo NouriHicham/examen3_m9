@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -10,7 +11,7 @@ export default function Footer() {
     <div className="container mx-auto px-4">
       <footer className="flex h-16 w-full items-center px-8 bg-black text-white justify-between">
         <Link href="#" className="flex items-center" prefetch={false}>
-          <img src="/logo.svg" alt="Pandem" width={20} height={20} />
+          <Image src="/logo.svg" alt="Pandem" width={20} height={20} />
           <span className="ml-3">Pandem</span>
         </Link>
         <NavigationMenu>
