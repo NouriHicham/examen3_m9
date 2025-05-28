@@ -1,103 +1,59 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowUpDown, ChevronRight, Clock, Route } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main>
+      <section className="flex flex-col items-center justify-center min-h-[50vh] bg-black text-white text-center">
+        <h1 className="text-5xl md:text-7xl font-bold mb-4">
+          Information you need during <br /> on-call emergencies
+        </h1>
+        <p className="text-lg md:text-2xl mb-8">
+          Quickly link new on-call tickets to similar past incidents and their solutions. All <br /> directly in Slack the moment an incident happens.
+        </p>
+        <Button className="bg-white text-black px-8 py-4 text-lg font-semibold rounded">
+          Get Started <ChevronRight className="ml-2" />
+        </Button>
+      </section>
+      <section className="flex items-center justify-center">
+        <img src="heroimage.png" alt="Hero Image" className="h-[80vh] w-auto"/>
+      </section>
+      <section className="flex flex-col items-center justify-center py-64 bg-black text-white text-center">
+        <h1 className="text-5xl md:text-7xl font-bold mb-20">
+          Quick solutions, less stress
+        </h1>
+        <div className="flex text-start">
+          <div className="mr-8 flex flex-col items-start">
+            <div className="p-7 border border-white rounded-2xl"><Clock size={36} /></div>
+            <h2 className="text-2xl font-bold mt-10">Fix emergencies fast</h2>
+            <p className="text-[20px] mt-10 w-[500px]">Save 20-30 minutes per on-call ticket - no more searching for relevant issues and runbooks</p>
+          </div>
+          <div className="mr-8 flex flex-col items-start">
+            <div className="p-7 border border-white rounded-2xl"><ArrowUpDown size={36} /></div>
+            <h2 className="text-2xl font-bold mt-10">Universally compatible</h2>
+            <p className="text-lg mt-10 w-[500px]">Works with PagerDuty, Jira, or custom Slack alerts—Pandem integrates with any system</p>
+          </div>
+          <div className="flex flex-col items-start">
+            <div className="p-7 border border-white rounded-2xl"><Route size={36} /></div>
+            <h2 className="text-2xl font-bold mt-10">Secure for your org</h2>
+            <p className="text-lg mt-10 w-[500px]">We keep your data safe by taking top security measures.</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      <section className="flex flex-col items-center justify-center text-white text-center">
+        <h1 className="text-5xl md:text-7xl font-bold mb-20">Instant setup, no custom<br /> code</h1>
+        <p className="text-lg md:text-2xl mb-20">Invite the bot, pick a channel, and you're set—no custom code needed, and no vendor lock-in.</p>
+        <img src="heroimage.png" alt="Hero Image" className="h-[60vh] w-auto"/>
+      </section>
+      <section className="flex flex-col items-center justify-center py-64 bg-black text-white text-center">
+        <h1 className="text-5xl md:text-7xl font-bold mb-10">
+          Get in touch
+        </h1>
+        <p className="text-lg md:text-2xl mb-10">Request a demo, or hop on a call.</p>
+        <Button className="bg-white text-black px-8 py-4 text-lg font-semibold rounded">
+          Get Started <ChevronRight className="ml-2" />
+        </Button>
+      </section>
+    </main>
   );
 }
